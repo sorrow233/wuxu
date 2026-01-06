@@ -6,29 +6,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 
-const projects = [
-    {
-        title: "Metro Nav",
-        description: "Real-time navigation app for the subway system aimed at tourists.",
-        tags: ["Next.js", "Leaflet", "OpenData"],
-        links: { github: "#", demo: "#" },
-    },
-    {
-        title: "Kanji Flashcards",
-        description: "SRS-based flashcard app for mastering JLPT N2/N1 kanji.",
-        tags: ["React", "Firebase", "PWA"],
-        links: { github: "#", demo: "#" },
-    },
-    {
-        title: "Personal Portfolio",
-        description: "The website you are looking at right now. Built with modern tech.",
-        tags: ["Next.js", "Tailwind", "Framer Motion"],
-        links: { github: "#", demo: "#" },
-    },
-]
-
 export function Projects({ dict }: { dict: any }) {
     if (!dict) return null;
+    const projects = dict.projects.list;
 
     return (
         <section className="w-full px-6 py-32 lg:px-24 bg-background">
@@ -40,15 +20,15 @@ export function Projects({ dict }: { dict: any }) {
                     transition={{ duration: 0.6 }}
                     className="mb-20 flex flex-col items-start gap-4"
                 >
-                    <span className="text-sm font-medium tracking-widest text-primary uppercase">Works</span>
-                    <h2 className="text-4xl font-light tracking-tight sm:text-5xl text-foreground">{dict.title}</h2>
+                    <span className="text-sm font-medium tracking-widest text-primary uppercase">{dict.common.works}</span>
+                    <h2 className="text-4xl font-light tracking-tight sm:text-5xl text-foreground">{dict.projects.title}</h2>
                     <p className="max-w-2xl text-lg text-muted-foreground font-light">
-                        {dict.description}
+                        {dict.projects.description}
                     </p>
                 </motion.div>
 
                 <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
+                    {projects.map((project: any, index: number) => (
                         <motion.div
                             key={project.title}
                             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +44,7 @@ export function Projects({ dict }: { dict: any }) {
                                         <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
                                     <CardDescription className="flex flex-wrap gap-2 mt-3">
-                                        {project.tags.map(tag => (
+                                        {project.tags.map((tag: string) => (
                                             <span key={tag} className="text-xs px-2 py-1 bg-secondary rounded-md text-secondary-foreground font-medium">
                                                 {tag}
                                             </span>
@@ -78,10 +58,10 @@ export function Projects({ dict }: { dict: any }) {
                                 </CardContent>
                                 <CardFooter className="flex gap-4 pt-6 border-t border-border/50">
                                     <a href={project.links.github} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                        <Github className="h-4 w-4" /> Code
+                                        <Github className="h-4 w-4" /> {dict.common.code}
                                     </a>
                                     <a href={project.links.demo} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                        <ExternalLink className="h-4 w-4" /> Demo
+                                        <ExternalLink className="h-4 w-4" /> {dict.common.demo}
                                     </a>
                                 </CardFooter>
                             </Card>

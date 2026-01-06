@@ -1,4 +1,13 @@
 {
+    "common": {
+        "works": "Works",
+        "code": "Code",
+        "demo": "Demo",
+        "aboutMe": "About Me",
+        "contact": "Contact",
+        "yearsExperience": "Years Experience",
+        "projectsCompleted": "Projects Completed"
+    },
     "hero": {
         "location": "도쿄, 일본 🇯🇵",
         "titleStart": "Dev &",
@@ -8,7 +17,48 @@
     },
     "projects": {
         "title": "주요 프로젝트",
-        "description": "제가 만든 것들입니다."
+        "description": "제가 만든 것들입니다.",
+        "list": [
+            {
+                "title": "Metro Nav",
+                "description": "Real-time navigation app for the subway system aimed at tourists.",
+                "tags": [
+                    "Next.js",
+                    "Leaflet",
+                    "OpenData"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Kanji Flashcards",
+                "description": "SRS-based flashcard app for mastering JLPT N2/N1 kanji.",
+                "tags": [
+                    "React",
+                    "Firebase",
+                    "PWA"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Personal Portfolio",
+                "description": "The website you are looking at right now. Built with modern tech.",
+                "tags": [
+                    "Next.js",
+                    "Tailwind",
+                    "Framer Motion"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            }
+        ]
     },
     "about": {
         "title": "소개",
@@ -16,7 +66,19 @@
         "description2": "도쿄",
         "description3": "2024년 10월 도착.",
         "description4": "기술과 미학의 조화.",
-        "techStack": "기술 스택"
+        "techStack": "기술 스택",
+        "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Python",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Git",
+            "Docker"
+        ]
     },
     "contact": {
         "title": "함께 만들어요",

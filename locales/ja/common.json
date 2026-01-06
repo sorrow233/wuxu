@@ -1,4 +1,13 @@
 {
+    "common": {
+        "works": "Works",
+        "code": "Code",
+        "demo": "Demo",
+        "aboutMe": "About Me",
+        "contact": "Contact",
+        "yearsExperience": "Years Experience",
+        "projectsCompleted": "Projects Completed"
+    },
     "hero": {
         "location": "東京、日本 🇯🇵",
         "titleStart": "開発者 &",
@@ -8,7 +17,48 @@
     },
     "projects": {
         "title": "主要プロジェクト",
-        "description": "これまでに開発した主な作品。"
+        "description": "これまでに開発した主な作品。",
+        "list": [
+            {
+                "title": "Metro Nav",
+                "description": "Real-time navigation app for the subway system aimed at tourists.",
+                "tags": [
+                    "Next.js",
+                    "Leaflet",
+                    "OpenData"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Kanji Flashcards",
+                "description": "SRS-based flashcard app for mastering JLPT N2/N1 kanji.",
+                "tags": [
+                    "React",
+                    "Firebase",
+                    "PWA"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Personal Portfolio",
+                "description": "The website you are looking at right now. Built with modern tech.",
+                "tags": [
+                    "Next.js",
+                    "Tailwind",
+                    "Framer Motion"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            }
+        ]
     },
     "about": {
         "title": "私について",
@@ -16,7 +66,19 @@
         "description2": "日本の東京",
         "description3": "に住んでいます。2024年10月に来日し、共立日語学院で日本語を学びながら、フルスタック開発者としての活動を続けています。",
         "description4": "私の目標は、技術的な卓越性と、私が敬愛する日本デザインの美的感覚を融合させることです。コーディングをしていない時は、文京区の裏道を散策したり、限られた調理器具で料理に挑戦したりしています。",
-        "techStack": "技術スタック"
+        "techStack": "技術スタック",
+        "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Python",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Git",
+            "Docker"
+        ]
     },
     "contact": {
         "title": "一緒に何か作りませんか",
