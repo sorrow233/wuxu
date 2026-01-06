@@ -62,27 +62,16 @@
     },
     "about": {
         "title": "關於我",
-        "description1": "你好！",
-        "description2": "東京",
-        "description3": "2024年10月抵達。",
-        "description4": "追求技術與美學的融合。",
+        "description1": "",
+        "description2": "",
+        "description3": "",
+        "description4": "",
         "techStack": "技術棧",
-        "skills": [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Node.js",
-            "Python",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Git",
-            "Docker"
-        ]
+        "skills": []
     },
     "contact": {
         "title": "聯絡我",
-        "description": "歡迎隨時聯絡。",
-        "cta": "打個招呼"
+        "description": "",
+        "cta": ""
     }
 }

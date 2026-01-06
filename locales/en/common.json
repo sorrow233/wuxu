@@ -62,27 +62,16 @@
     },
     "about": {
         "title": "About Me",
-        "description1": "Hello! I'm a software developer originally from [Your Country], now living in",
-        "description2": "Tokyo, Japan",
-        "description3": "I arrived in October 2024 and I'm currently studying Japanese at Kyoritsu Japanese Language Academy while continuing my journey as a Full-Stack Developer.",
-        "description4": "My goal is to blend technical excellence with the aesthetic sensibility I admire in Japanese design. When I'm not coding, I'm exploring the backstreets of Bunkyo-ku or trying to cook with my limited kitchen gear.",
+        "description1": "",
+        "description2": "",
+        "description3": "",
+        "description4": "",
         "techStack": "Tech Stack",
-        "skills": [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Node.js",
-            "Python",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Git",
-            "Docker"
-        ]
+        "skills": []
     },
     "contact": {
         "title": "Let's Create Something Together",
-        "description": "Whether you have a question, a project idea, or just want to say hi in Tokyo, my inbox is always open.",
-        "cta": "Say Hello"
+        "description": "",
+        "cta": ""
     }
 }

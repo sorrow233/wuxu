@@ -62,27 +62,16 @@
     },
     "about": {
         "title": "소개",
-        "description1": "안녕하세요!",
-        "description2": "도쿄",
-        "description3": "2024년 10월 도착.",
-        "description4": "기술과 미학의 조화.",
+        "description1": "",
+        "description2": "",
+        "description3": "",
+        "description4": "",
         "techStack": "기술 스택",
-        "skills": [
-            "JavaScript",
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Node.js",
-            "Python",
-            "Tailwind CSS",
-            "Framer Motion",
-            "Git",
-            "Docker"
-        ]
+        "skills": []
     },
     "contact": {
         "title": "함께 만들어요",
-        "description": "언제든 연락주세요.",
-        "cta": "인사하기"
+        "description": "",
+        "cta": ""
     }
 }

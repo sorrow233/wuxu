@@ -53,17 +53,7 @@ export function About({ dict, common }: { dict: any, common: any }) {
                             {dict.description4}
                         </p>
 
-                        <div className="pt-8 grid grid-cols-2 gap-8 border-t border-zinc-200 dark:border-zinc-800">
-                            {/*  Stats or extra info could go here for "Rich" feel */}
-                            <div>
-                                <span className="block text-3xl font-bold text-foreground">3+</span>
-                                <span className="text-sm text-muted-foreground">{common.yearsExperience}</span>
-                            </div>
-                            <div>
-                                <span className="block text-3xl font-bold text-foreground">15+</span>
-                                <span className="text-sm text-muted-foreground">{common.projectsCompleted}</span>
-                            </div>
-                        </div>
+                        {/* Stats removed as requested */}
                     </div>
                 </motion.div>
             </div>

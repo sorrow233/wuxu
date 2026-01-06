@@ -12,15 +12,15 @@
     },
     "about": {
         "title": "关于我",
-        "description1": "你好！我是一名软件开发者，目前生活在",
-        "description2": "日本东京",
-        "description3": "。我于2024年10月抵达，目前在共立日语学院学习日语，同时继续我的全栈开发者之旅。",
-        "description4": "我的目标是将卓越的技术与我所推崇的日本设计美学相结合。不写代码的时候，我喜欢探索文京区的小巷，或者试着用有限的厨具做饭。",
+        "description1": "",
+        "description2": "",
+        "description3": "",
+        "description4": "",
         "techStack": "技术栈"
     },
     "contact": {
         "title": "联系我",
-        "description": "无论你有问题、项目想法，还是只想在东京打个招呼，欢迎随时联系。",
-        "cta": "打个招呼"
+        "description": "",
+        "cta": ""
     }
 }
