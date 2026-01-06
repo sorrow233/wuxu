@@ -48,9 +48,9 @@ export default async function Home({ params }: Props) {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden bg-background text-foreground">
             <Hero dict={dict.hero} />
-            <Projects dict={dict.projects} />
-            <About dict={dict.about} />
-            <Contact dict={dict.contact} />
+            <Projects dict={dict} />
+            <About dict={dict} />
+            <Contact dict={dict} />
         </main>
     );
 }
