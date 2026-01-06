@@ -1,20 +1,42 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/app/globals.css";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { Noto_Sans_JP, Outfit } from "next/font/google"; // Updated fonts
+import "./globals.css";
 
-export default async function LangLayout({
-    children,
-    params,
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: "Wuxu | Full-Stack Developer",
+  description: "Personal website of a software developer.",
+};
+
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
+export default async function RootLayout({
+  children,
+  params
 }: Readonly<{
-    children: React.ReactNode;
-    params: Promise<{ lang: string }>;
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
-    const { lang } = await params;
-    return (
-        <div lang={lang}>
-            {children}
-            <LanguageSwitcher />
-        </div>
-    );
+  const { lang } = await params;
+  return (
+    <html lang={lang}>
+      <body
+        className={`${outfit.variable} ${notoSansJP.variable} font-sans antialiased text-foreground bg-background`}
+      >
+        <LanguageSwitcher currentLang={lang} />
+        {children}
+      </body>
+    </html>
+  );
 }
