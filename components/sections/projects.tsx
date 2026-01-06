@@ -6,9 +6,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 
-export function Projects({ dict }: { dict: any }) {
+export function Projects({ dict, common }: { dict: any, common: any }) {
     if (!dict) return null;
-    const projects = dict.projects.list;
+    const projects = dict.list;
 
     return (
         <section className="w-full px-6 py-32 lg:px-24 bg-background">
@@ -20,10 +20,10 @@ export function Projects({ dict }: { dict: any }) {
                     transition={{ duration: 0.6 }}
                     className="mb-20 flex flex-col items-start gap-4"
                 >
-                    <span className="text-sm font-medium tracking-widest text-primary uppercase">{dict.common.works}</span>
-                    <h2 className="text-4xl font-light tracking-tight sm:text-5xl text-foreground">{dict.projects.title}</h2>
+                    <span className="text-sm font-medium tracking-widest text-primary uppercase">{common.works}</span>
+                    <h2 className="text-4xl font-light tracking-tight sm:text-5xl text-foreground">{dict.title}</h2>
                     <p className="max-w-2xl text-lg text-muted-foreground font-light">
-                        {dict.projects.description}
+                        {dict.description}
                     </p>
                 </motion.div>
 
@@ -58,10 +58,10 @@ export function Projects({ dict }: { dict: any }) {
                                 </CardContent>
                                 <CardFooter className="flex gap-4 pt-6 border-t border-border/50">
                                     <a href={project.links.github} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                        <Github className="h-4 w-4" /> {dict.common.code}
+                                        <Github className="h-4 w-4" /> {common.code}
                                     </a>
                                     <a href={project.links.demo} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
-                                        <ExternalLink className="h-4 w-4" /> {dict.common.demo}
+                                        <ExternalLink className="h-4 w-4" /> {common.demo}
                                     </a>
                                 </CardFooter>
                             </Card>

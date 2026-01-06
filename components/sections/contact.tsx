@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
 
-export function Contact({ dict }: { dict: any }) {
+export function Contact({ dict, common }: { dict: any, common: any }) {
     if (!dict) return null;
 
     return (
@@ -20,7 +20,7 @@ export function Contact({ dict }: { dict: any }) {
                     className="space-y-10"
                 >
                     <div className="space-y-4">
-                        <span className="text-sm font-medium tracking-widest text-zinc-400 uppercase">{dict.common.contact}</span>
+                        <span className="text-sm font-medium tracking-widest text-zinc-400 uppercase">{common.contact}</span>
                         <h2 className="text-5xl font-light tracking-tight sm:text-6xl text-background">
                             {dict.title}
                         </h2>

@@ -3,9 +3,9 @@
 
 import { motion } from "framer-motion"
 
-export function About({ dict }: { dict: any }) {
+export function About({ dict, common }: { dict: any, common: any }) {
     if (!dict) return null;
-    const skills = dict.about.skills;
+    const skills = dict.skills;
 
     return (
         <section className="w-full px-6 py-32 lg:px-24 bg-zinc-50 dark:bg-zinc-950/50">
@@ -19,12 +19,12 @@ export function About({ dict }: { dict: any }) {
                 >
                     <div className="space-y-8 sticky top-24">
                         <div className="space-y-2">
-                            <span className="text-sm font-medium tracking-widest text-primary uppercase">{dict.common.aboutMe}</span>
-                            <h2 className="text-4xl font-light tracking-tight text-foreground">{dict.about.title}</h2>
+                            <span className="text-sm font-medium tracking-widest text-primary uppercase">{common.aboutMe}</span>
+                            <h2 className="text-4xl font-light tracking-tight text-foreground">{dict.title}</h2>
                         </div>
 
                         <div className="p-8 rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 shadow-sm">
-                            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">{dict.about.techStack}</h3>
+                            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">{dict.techStack}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {skills.map((skill: string) => (
                                     <span
@@ -40,28 +40,28 @@ export function About({ dict }: { dict: any }) {
 
                     <div className="space-y-8 text-lg leading-loose text-muted-foreground font-light">
                         <p className="first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 float-left">
-                            {dict.about.description1.charAt(0)}
+                            {dict.description1.charAt(0)}
                         </p>
                         <p>
-                            {dict.about.description1.slice(1)}
-                            <span className="font-medium text-foreground"> {dict.about.description2}</span>.
+                            {dict.description1.slice(1)}
+                            <span className="font-medium text-foreground"> {dict.description2}</span>.
                         </p>
                         <p>
-                            {dict.about.description3}
+                            {dict.description3}
                         </p>
                         <p>
-                            {dict.about.description4}
+                            {dict.description4}
                         </p>
 
                         <div className="pt-8 grid grid-cols-2 gap-8 border-t border-zinc-200 dark:border-zinc-800">
                             {/*  Stats or extra info could go here for "Rich" feel */}
                             <div>
                                 <span className="block text-3xl font-bold text-foreground">3+</span>
-                                <span className="text-sm text-muted-foreground">{dict.common.yearsExperience}</span>
+                                <span className="text-sm text-muted-foreground">{common.yearsExperience}</span>
                             </div>
                             <div>
                                 <span className="block text-3xl font-bold text-foreground">15+</span>
-                                <span className="text-sm text-muted-foreground">{dict.common.projectsCompleted}</span>
+                                <span className="text-sm text-muted-foreground">{common.projectsCompleted}</span>
                             </div>
                         </div>
                     </div>
