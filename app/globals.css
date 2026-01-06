@@ -23,55 +23,105 @@
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
+
+  /* Custom Fonts */
+  --font-sans: var(--font-outfit), var(--font-noto-sans-jp), sans-serif;
+  --font-jp: var(--font-noto-sans-jp), sans-serif;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
-  --card: #ffffff;
-  --card-foreground: #09090b;
-  --popover: #ffffff;
-  --popover-foreground: #09090b;
-  --primary: #18181b;
-  --primary-foreground: #fafafa;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #18181b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #f4f4f5;
-  --accent-foreground: #18181b;
-  --destructive: #ef4444;
-  --destructive-foreground: #fafafa;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #18181b;
+  /* Rich Minimalist Japanese Palette */
+
+  /* Washi White / Paper */
+  --background: #F9F9F8;
+  /* Sumi Charcoal / Ink */
+  --foreground: #2D2D2D;
+
+  /* Card Background (Slightly lighter than bg on light mode, or glass) */
+  --card: #FFFFFF;
+  --card-foreground: #2D2D2D;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2D2D;
+
+  /* Japan Indigo (Kachi-iro) - Bold accent */
+  --primary: #2B4C7E;
+  --primary-foreground: #FFFFFF;
+
+  /* Stone / Pebble (Light Gray for secondary) */
+  --secondary: #E5E5E5;
+  --secondary-foreground: #2D2D2D;
+
+  /* Muted Text / Silver Gray */
+  --muted: #F4F4F5;
+  --muted-foreground: #6B7280;
+
+  /* Subtle Accent (Match Primary or lighter indigo) */
+  --accent: #EBF1F5;
+  --accent-foreground: #2B4C7E;
+
+  --destructive: #B91C1C;
+  /* Traditional Crimson Red could work too but sticking to safe red */
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E4E4E7;
+  --input: #E4E4E7;
+  --ring: #2B4C7E;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --card: #09090b;
-  --card-foreground: #fafafa;
-  --popover: #09090b;
-  --popover-foreground: #fafafa;
-  --primary: #fafafa;
-  --primary-foreground: #18181b;
-  --secondary: #27272a;
-  --secondary-foreground: #fafafa;
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  --accent: #27272a;
-  --accent-foreground: #fafafa;
-  --destructive: #7f1d1d;
-  --destructive-foreground: #fafafa;
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #d4d4d8;
+  /* Dark Mode: Deep Indigo / Night Sky */
+  --background: #0E1217;
+  --foreground: #F3F4F6;
+
+  --card: #161B22;
+  --card-foreground: #F3F4F6;
+
+  --popover: #161B22;
+  --popover-foreground: #F3F4F6;
+
+  --primary: #A5B4FC;
+  /* Lighter Indigo for dark mode */
+  --primary-foreground: #0E1217;
+
+  --secondary: #27272A;
+  --secondary-foreground: #F3F4F6;
+
+  --muted: #27272A;
+  --muted-foreground: #9CA3AF;
+
+  --accent: #1F2937;
+  --accent-foreground: #F3F4F6;
+
+  --destructive: #7F1D1D;
+  --destructive-foreground: #F3F4F6;
+
+  --border: #27272A;
+  --input: #27272A;
+  --ring: #A5B4FC;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for subtle feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--muted-foreground);
+  opacity: 0.2;
+  border-radius: 4px;
 }

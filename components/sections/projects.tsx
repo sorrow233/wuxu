@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 
 const projects = [
     {
@@ -30,22 +30,23 @@ export function Projects({ dict }: { dict: any }) {
     if (!dict) return null;
 
     return (
-        <section className="w-full px-6 py-24 lg:px-24 bg-zinc-50/50 dark:bg-zinc-900/50">
-            <div className="mx-auto max-w-5xl">
+        <section className="w-full px-6 py-32 lg:px-24 bg-background">
+            <div className="mx-auto max-w-7xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="mb-12 text-center lg:text-left"
+                    transition={{ duration: 0.6 }}
+                    className="mb-20 flex flex-col items-start gap-4"
                 >
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{dict.title}</h2>
-                    <p className="mt-4 text-zinc-500 dark:text-zinc-400">
+                    <span className="text-sm font-medium tracking-widest text-primary uppercase">Works</span>
+                    <h2 className="text-4xl font-light tracking-tight sm:text-5xl text-foreground">{dict.title}</h2>
+                    <p className="max-w-2xl text-lg text-muted-foreground font-light">
                         {dict.description}
                     </p>
                 </motion.div>
 
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
@@ -53,26 +54,34 @@ export function Projects({ dict }: { dict: any }) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="group"
                         >
-                            <Card className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
-                                <CardHeader>
-                                    <CardTitle>{project.title}</CardTitle>
-                                    <CardDescription className="mt-2 text-xs text-zinc-400">
-                                        {project.tags.join(" • ")}
+                            <Card className="h-full flex flex-col border border-border bg-card/50 hover:bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl rounded-xl overflow-hidden hover:border-primary/20">
+                                <CardHeader className="pb-4">
+                                    <div className="flex justify-between items-start">
+                                        <CardTitle className="text-xl font-medium tracking-tight">{project.title}</CardTitle>
+                                        <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    </div>
+                                    <CardDescription className="flex flex-wrap gap-2 mt-3">
+                                        {project.tags.map(tag => (
+                                            <span key={tag} className="text-xs px-2 py-1 bg-secondary rounded-md text-secondary-foreground font-medium">
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="flex-1">
-                                    <p className="text-sm text-zinc-600 dark:text-zinc-300">
+                                    <p className="text-sm leading-relaxed text-muted-foreground">
                                         {project.description}
                                     </p>
                                 </CardContent>
-                                <CardFooter className="flex gap-2">
-                                    <Button variant="outline" size="sm" className="w-full gap-2">
+                                <CardFooter className="flex gap-4 pt-6 border-t border-border/50">
+                                    <a href={project.links.github} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                                         <Github className="h-4 w-4" /> Code
-                                    </Button>
-                                    <Button size="sm" className="w-full gap-2">
+                                    </a>
+                                    <a href={project.links.demo} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
                                         <ExternalLink className="h-4 w-4" /> Demo
-                                    </Button>
+                                    </a>
                                 </CardFooter>
                             </Card>
                         </motion.div>

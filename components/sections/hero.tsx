@@ -8,20 +8,17 @@ export function Hero({ dict }: { dict: any }) {
     if (!dict) return null;
 
     return (
-        <section className="relative flex min-h-[90vh] flex-col-reverse items-center justify-center overflow-hidden px-6 py-12 lg:flex-row lg:px-24 text-center lg:text-left">
-            {/* Abstract Background Elements */}
-            <div className="absolute inset-0 z-[-1] overflow-hidden">
-                <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[100px]" />
-                <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[100px]" />
-            </div>
+        <section className="relative flex min-h-[90vh] flex-col-reverse items-center justify-center overflow-hidden px-6 py-12 lg:flex-row lg:px-24">
 
-            <div className="flex flex-1 flex-col justify-center gap-6 z-10 w-full max-w-2xl">
+            <div className="flex flex-1 flex-col justify-center gap-8 z-10 w-full max-w-3xl">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="flex items-center gap-3"
                 >
-                    <span className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100">
+                    <span className="h-[1px] w-12 bg-zinc-400 dark:bg-zinc-600"></span>
+                    <span className="text-sm font-medium tracking-widest uppercase text-zinc-500 dark:text-zinc-400">
                         {dict.location}
                     </span>
                 </motion.div>
@@ -29,20 +26,22 @@ export function Hero({ dict }: { dict: any }) {
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl"
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    className="text-6xl font-bold tracking-tight sm:text-7xl lg:text-8xl text-zinc-900 dark:text-zinc-50 leading-[1.1]"
                 >
-                    {dict.titleStart} <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+                    {dict.titleStart}
+                    <br />
+                    <span className="text-zinc-400 dark:text-zinc-600">
                         {dict.titleEnd}
                     </span>
+                    <span className="text-primary text-2xl lg:text-3xl ml-2 align-top">.</span>
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg text-zinc-600 dark:text-zinc-400 sm:text-xl"
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                    className="max-w-xl text-lg text-zinc-600 dark:text-zinc-400 sm:text-xl leading-relaxed font-light"
                 >
                     {dict.description}
                 </motion.p>
@@ -50,35 +49,41 @@ export function Hero({ dict }: { dict: any }) {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
+                    transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                    className="flex flex-wrap items-center gap-6 mt-4"
                 >
-                    <Button size="lg" className="rounded-full gap-2 group">
+                    <Button size="lg" className="rounded-full px-8 py-6 text-base shadow-none hover:shadow-lg transition-all duration-300 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">
                         {dict.ctaProject}
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <div className="flex gap-2">
-                        <Button variant="ghost" size="icon" className="rounded-full">
-                            <Github className="h-5 w-5" />
+                    <div className="flex gap-4">
+                        <Button variant="ghost" size="icon" className="rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                            <Github className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
                         </Button>
-                        <Button variant="ghost" size="icon" className="rounded-full">
-                            <Twitter className="h-5 w-5" />
+                        <Button variant="ghost" size="icon" className="rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                            <Twitter className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
                         </Button>
                     </div>
                 </motion.div>
             </div>
 
-            <div className="relative flex-1 flex items-center justify-center lg:justify-end mb-12 lg:mb-0">
-                {/* Placeholder for Memoji/Image */}
+            <div className="relative flex-1 flex items-center justify-center lg:justify-end mb-16 lg:mb-0">
                 <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
+                    initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px] rounded-full bg-gradient-to-b from-zinc-200 to-white dark:from-zinc-800 dark:to-zinc-950 ring-1 ring-zinc-100 dark:ring-zinc-800 flex items-center justify-center overflow-hidden"
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative px-8"
                 >
-                    <span className="text-zinc-300 dark:text-zinc-600 text-sm font-mono">
-                        [Your Image/Memoji Here]
-                    </span>
+                    <div className="relative h-[400px] w-[300px] sm:h-[500px] sm:w-[400px] bg-zinc-100 dark:bg-zinc-900 overflow-hidden shadow-2xl skew-y-[-3deg] rounded-sm border border-zinc-200 dark:border-zinc-800">
+                        {/* Placeholder for minimalist portrait or abstract art */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-zinc-300 dark:text-zinc-700 font-mono tracking-widest text-xs rotate-[-3deg]">
+                                [IMAGE / ARTWORK]
+                            </span>
+                        </div>
+                    </div>
+                    {/* Decorative element */}
+                    <div className="absolute -z-10 bottom-[-20px] left-[-20px] h-full w-full border border-zinc-200 dark:border-zinc-800 skew-y-[-3deg] rounded-sm" />
                 </motion.div>
             </div>
         </section>
