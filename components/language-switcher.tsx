@@ -26,6 +26,14 @@ export function LanguageSwitcher() {
         const segments = pathname.split("/")
         segments[1] = langCode
         const newPath = segments.join("/")
+
+        // Save to cookie for middleware detection (1 year)
+        // eslint-disable-next-line react-hooks/immutability
+        document.cookie = `NEXT_LOCALE=${langCode}; path=/; max-age=31536000; SameSite=Lax`
+
+        // Save to localStorage as requested
+        localStorage.setItem("user-lang", langCode)
+
         router.push(newPath)
         setIsOpen(false)
     }

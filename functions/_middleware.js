@@ -7,9 +7,20 @@ export async function onRequest(context) {
 
     // 1. Auto-Detection for Root Path '/'
     if (path === '/') {
-        const acceptLanguage = request.headers.get('Accept-Language');
         let targetLang = seoConfig.defaultLanguage; // Default to 'en'
 
+        // Priority 1: Check Cookie (User Manual Preference)
+        const cookieHeader = request.headers.get('Cookie');
+        if (cookieHeader) {
+            // Simple cookie parsing
+            const match = cookieHeader.match(/NEXT_LOCALE=([^;]+)/);
+            if (match && match[1] && seoConfig.languages.includes(match[1])) {
+                return Response.redirect(`${url.origin}/${match[1]}`, 302);
+            }
+        }
+
+        // Priority 2: Auto-detect from Accept-Language
+        const acceptLanguage = request.headers.get('Accept-Language');
         if (acceptLanguage) {
             // Basic parsing of Accept-Language header (e.g., "ja,en-US;q=0.9,en;q=0.8")
             const preferredLangs = acceptLanguage.split(',').map(lang => lang.split(';')[0].trim());
@@ -22,9 +33,9 @@ export async function onRequest(context) {
                 }
                 // Check primary subtag (e.g., zh in zh-CN, or ja in ja-JP)
                 const base = pref.split('-')[0];
-                const match = seoConfig.languages.find(l => l.startsWith(base));
-                if (match) {
-                    targetLang = match;
+                const matchLang = seoConfig.languages.find(l => l.startsWith(base));
+                if (matchLang) {
+                    targetLang = matchLang;
                     break;
                 }
             }

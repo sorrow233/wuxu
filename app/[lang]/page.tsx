@@ -6,6 +6,8 @@ import { getDictionary, Language } from "@/lib/i18n";
 import { Metadata } from "next";
 
 // Import seo-config
+// Import seo-config
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const seoConfig = require("@/seo-config");
 
 type Props = {
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Home({ params }: Props) {
     const { lang } = await params;
-    const dict = getDictionary(lang);
+    const dict = await getDictionary(lang);
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden bg-background text-foreground">

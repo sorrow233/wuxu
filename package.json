@@ -10,10 +10,12 @@
     "postbuild": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.7.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.24.0",
     "lucide-react": "^0.562.0",
+    "negotiator": "^1.0.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
