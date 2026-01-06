@@ -8,7 +8,7 @@ export function About({ dict, common }: { dict: any, common: any }) {
     const skills = dict.skills;
 
     return (
-        <section className="w-full px-6 py-32 lg:px-24 bg-zinc-50 dark:bg-zinc-950/50">
+        <section className="w-full px-6 py-32 lg:px-24 bg-[#EAE4D9]">
             <div className="mx-auto max-w-6xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

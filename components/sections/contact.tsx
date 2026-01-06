@@ -9,7 +9,7 @@ export function Contact({ dict, common }: { dict: any, common: any }) {
     if (!dict) return null;
 
     return (
-        <section className="w-full px-6 py-32 lg:px-24 bg-foreground text-background overflow-hidden relative">
+        <section className="w-full px-6 py-32 lg:px-24 bg-[#2D2D2D] text-[#EAE4D9] overflow-hidden relative">
 
             <div className="mx-auto max-w-4xl text-center relative z-10 flex flex-col items-center">
                 <motion.div
