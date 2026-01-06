@@ -22,10 +22,6 @@ export function Hero({ dict }: { dict: any }) {
                     transition={{ duration: 0.5 }}
                     className="flex items-center justify-center lg:justify-start gap-2"
                 >
-                    <div className="flex items-center gap-1.5 rounded-full bg-white/80 px-4 py-1.5 text-sm font-medium text-foreground shadow-sm ring-1 ring-border backdrop-blur-sm dark:bg-zinc-900/80">
-                        <MapPin className="h-4 w-4 text-primary" />
-                        <span>Tokyo</span>
-                    </div>
                 </motion.div>
 
                 <motion.h1
