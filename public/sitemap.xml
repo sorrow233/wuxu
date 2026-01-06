@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://wuxu.catzz.work/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuxu.catzz.work/en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuxu.catzz.work/ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wuxu.catzz.work/ko" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wuxu.catzz.work/zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wuxu.catzz.work/zh-TW" />
+  </url>
+  <url>
+    <loc>https://wuxu.catzz.work/ja</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuxu.catzz.work/en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuxu.catzz.work/ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wuxu.catzz.work/ko" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wuxu.catzz.work/zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wuxu.catzz.work/zh-TW" />
+  </url>
+  <url>
+    <loc>https://wuxu.catzz.work/ko</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuxu.catzz.work/en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuxu.catzz.work/ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wuxu.catzz.work/ko" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wuxu.catzz.work/zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wuxu.catzz.work/zh-TW" />
+  </url>
+  <url>
+    <loc>https://wuxu.catzz.work/zh-CN</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuxu.catzz.work/en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuxu.catzz.work/ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wuxu.catzz.work/ko" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wuxu.catzz.work/zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wuxu.catzz.work/zh-TW" />
+  </url>
+  <url>
+    <loc>https://wuxu.catzz.work/zh-TW</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuxu.catzz.work/en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuxu.catzz.work/ja" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://wuxu.catzz.work/ko" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://wuxu.catzz.work/zh-CN" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://wuxu.catzz.work/zh-TW" />
+  </url>
+</urlset>

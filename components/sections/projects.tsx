@@ -26,7 +26,9 @@ const projects = [
     },
 ]
 
-export function Projects() {
+export function Projects({ dict }: { dict: any }) {
+    if (!dict) return null;
+
     return (
         <section className="w-full px-6 py-24 lg:px-24 bg-zinc-50/50 dark:bg-zinc-900/50">
             <div className="mx-auto max-w-5xl">
@@ -37,9 +39,9 @@ export function Projects() {
                     transition={{ duration: 0.5 }}
                     className="mb-12 text-center lg:text-left"
                 >
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{dict.title}</h2>
                     <p className="mt-4 text-zinc-500 dark:text-zinc-400">
-                        A selection of things I've built.
+                        {dict.description}
                     </p>
                 </motion.div>
 
