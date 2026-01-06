@@ -48,26 +48,24 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsOpen(!isOpen)}
-                    className="rounded-full bg-background/50 backdrop-blur-sm border shadow-sm hover:bg-accent"
+                    className="rounded-full hover:bg-muted text-muted-foreground hover:text-foreground"
                 >
                     <Globe className="h-5 w-5" />
                 </Button>
                 {isOpen && (
-                    <div className="absolute right-0 mt-2 w-40 rounded-md bg-background border shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="py-1">
-                            {languages.map((lang) => (
-                                <button
-                                    key={lang.code}
-                                    onClick={() => handleLanguageChange(lang.code)}
-                                    className={`block w-full text-left px-4 py-2 text-sm transition-colors ${currentLang === lang.code
-                                            ? "bg-accent text-accent-foreground font-medium"
-                                            : "text-muted-foreground hover:bg-accent/50 hover:text-accent-foreground"
-                                        }`}
-                                >
-                                    {lang.label}
-                                </button>
-                            ))}
-                        </div>
+                    <div className="absolute right-0 mt-2 w-40 rounded-lg bg-popover border border-border/50 shadow-xl overflow-hidden py-1">
+                        {languages.map((lang) => (
+                            <button
+                                key={lang.code}
+                                onClick={() => handleLanguageChange(lang.code)}
+                                className={`block w-full text-left px-4 py-2.5 text-sm transition-colors ${currentLang === lang.code
+                                    ? "bg-muted font-medium text-foreground"
+                                    : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
+                                    }`}
+                            >
+                                {lang.label}
+                            </button>
+                        ))}
                     </div>
                 )}
             </div>

@@ -30,58 +30,85 @@
 }
 
 :root {
-  --background: #fdfcf8;
-  --foreground: #1e293b;
+  /* Premium Minimalist - Light Mode (Warm/Clean) */
+  --background: #ffffff;
+  --foreground: #09090b;
+  /* Zinc 950 */
+
   --card: #ffffff;
-  --card-foreground: #1e293b;
+  --card-foreground: #09090b;
+
   --popover: #ffffff;
-  --popover-foreground: #1e293b;
-  --primary: #0ea5e9;
-  --primary-foreground: #ffffff;
-  --secondary: #f472b6;
-  --secondary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #84cc16;
-  --accent-foreground: #ffffff;
+  --popover-foreground: #09090b;
+
+  --primary: #18181b;
+  /* Zinc 900 */
+  --primary-foreground: #fafafa;
+  /* Zinc 50 */
+
+  --secondary: #f4f4f5;
+  /* Zinc 100 */
+  --secondary-foreground: #18181b;
+
+  --muted: #f4f4f5;
+  /* Zinc 100 */
+  --muted-foreground: #71717a;
+  /* Zinc 500 */
+
+  --accent: #f4f4f5;
+  /* Zinc 100 */
+  --accent-foreground: #18181b;
+
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #0ea5e9;
+
+  --border: #e4e4e7;
+  /* Zinc 200 */
+  --input: #e4e4e7;
+  --ring: #18181b;
+
   --radius: 0.5rem;
 }
 
 .dark {
-  /* Dark Mode: Deep Indigo / Night Sky */
-  --background: #0E1217;
-  --foreground: #F3F4F6;
+  /* Premium Minimalist - Dark Mode (Deep/Sleek) */
+  --background: #09090b;
+  /* Zinc 950 */
+  --foreground: #fafafa;
+  /* Zinc 50 */
 
-  --card: #161B22;
-  --card-foreground: #F3F4F6;
+  --card: #09090b;
+  --card-foreground: #fafafa;
 
-  --popover: #161B22;
-  --popover-foreground: #F3F4F6;
+  --popover: #09090b;
+  --popover-foreground: #fafafa;
 
-  --primary: #A5B4FC;
-  /* Lighter Indigo for dark mode */
-  --primary-foreground: #0E1217;
+  --primary: #fafafa;
+  /* Zinc 50 */
+  --primary-foreground: #18181b;
+  /* Zinc 900 */
 
-  --secondary: #27272A;
-  --secondary-foreground: #F3F4F6;
+  --secondary: #27272a;
+  /* Zinc 800 */
+  --secondary-foreground: #fafafa;
 
-  --muted: #27272A;
-  --muted-foreground: #9CA3AF;
+  --muted: #27272a;
+  /* Zinc 800 */
+  --muted-foreground: #a1a1aa;
+  /* Zinc 400 */
 
-  --accent: #1F2937;
-  --accent-foreground: #F3F4F6;
+  --accent: #27272a;
+  /* Zinc 800 */
+  --accent-foreground: #fafafa;
 
-  --destructive: #7F1D1D;
-  --destructive-foreground: #F3F4F6;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
 
-  --border: #27272A;
-  --input: #27272A;
-  --ring: #A5B4FC;
+  --border: #27272a;
+  /* Zinc 800 */
+  --input: #27272a;
+  --ring: #d4d4d8;
+  /* Zinc 300 */
 }
 
 body {
