@@ -16,12 +16,13 @@
         "ctaProject": "查看项目"
     },
     "projects": {
-        "title": "精选项目",
+        "title": "Works",
         "description": "我的一些作品。",
         "list": [
             {
                 "title": "Metro Nav",
                 "description": "面向游客的地铁实时导航应用。",
+                "image": "/images/projects/metro-nav.png",
                 "tags": [
                     "Next.js",
                     "Leaflet",
@@ -35,6 +36,7 @@
             {
                 "title": "Kanji Flashcards",
                 "description": "基于SRS的背词应用，助你掌握JLPT N2/N1。",
+                "image": "/images/projects/kanji-flashcards.png",
                 "tags": [
                     "React",
                     "Firebase",
@@ -48,6 +50,7 @@
             {
                 "title": "Personal Portfolio",
                 "description": "你现在看到的这个网站。使用现代技术构建。",
+                "image": "/images/projects/portfolio.png",
                 "tags": [
                     "Next.js",
                     "Tailwind",

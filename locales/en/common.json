@@ -16,12 +16,13 @@
         "ctaProject": "Check Projects"
     },
     "projects": {
-        "title": "Featured Projects",
+        "title": "Works",
         "description": "A selection of things I've built.",
         "list": [
             {
                 "title": "Metro Nav",
                 "description": "Real-time navigation app for the subway system aimed at tourists.",
+                "image": "/images/projects/metro-nav.png",
                 "tags": [
                     "Next.js",
                     "Leaflet",
@@ -35,6 +36,7 @@
             {
                 "title": "Kanji Flashcards",
                 "description": "SRS-based flashcard app for mastering JLPT N2/N1 kanji.",
+                "image": "/images/projects/kanji-flashcards.png",
                 "tags": [
                     "React",
                     "Firebase",
@@ -48,6 +50,7 @@
             {
                 "title": "Personal Portfolio",
                 "description": "The website you are looking at right now. Built with modern tech.",
+                "image": "/images/projects/portfolio.png",
                 "tags": [
                     "Next.js",
                     "Tailwind",
