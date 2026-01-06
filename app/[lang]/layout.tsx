@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export default async function LangLayout({
     children,
@@ -13,6 +14,7 @@ export default async function LangLayout({
     return (
         <div lang={lang}>
             {children}
+            <LanguageSwitcher />
         </div>
     );
 }
