@@ -15,8 +15,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Tokyo Lifestyler | Full-Stack Developer",
-  description: "Personal website of a Tokyo-based software developer.",
+  title: "Wuxu | Full-Stack Developer",
+  description: "Personal website of a software developer.",
 };
 
 export default function RootLayout({

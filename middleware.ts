@@ -1,53 +1,60 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { match } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import { match } from '@formatjs/intl-localematcher'
+import Negotiator from 'negotiator'
 
-const locales = ["en", "ja", "ko", "zh-CN", "zh-TW"];
-const defaultLocale = "en";
+const locales = ['en', 'ja', 'ko', 'zh-CN', 'zh-TW']
+const defaultLocale = 'en' // Priority 3: English
 
 function getLocale(request: NextRequest): string {
-    // 1. Check cookie for manual preference
-    const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
+    // Priority 1: Manual (Cookie)
+    const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value
     if (cookieLocale && locales.includes(cookieLocale)) {
-        return cookieLocale;
+        return cookieLocale
     }
 
-    // 2. Check Accept-Language header
-    const headers = { "accept-language": request.headers.get("accept-language") || "" };
-    const languages = new Negotiator({ headers }).languages();
+    // Priority 2: System (Header)
+    const headers = { 'accept-language': request.headers.get('accept-language') || '' }
+    const languages = new Negotiator({ headers }).languages()
 
     try {
-        // 3. Match against supported locales
-        return match(languages, locales, defaultLocale);
+        return match(languages, locales, defaultLocale)
     } catch (e) {
-        return defaultLocale;
+        return defaultLocale
     }
 }
 
 export function middleware(request: NextRequest) {
-    const { pathname } = request.nextUrl;
+    const { pathname } = request.nextUrl
 
-    // Check if there is any supported locale in the pathname
+    // Skip files and API
+    if (
+        pathname.startsWith('/_next') ||
+        pathname.startsWith('/api') ||
+        pathname.startsWith('/favicon.ico') ||
+        pathname.match(/\.(png|jpg|jpeg|svg|css|js|map|json|ico)$/)
+    ) {
+        return
+    }
+
+    // Check if pathname has locale
     const pathnameHasLocale = locales.some(
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-    );
+    )
 
-    if (pathnameHasLocale) return;
+    if (pathnameHasLocale) {
+        return
+    }
 
-    // Redirect if no locale found in path
-    const locale = getLocale(request);
-
-    // Construct new URL
-    const newUrl = new URL(`/${locale}${pathname === '/' ? '' : pathname}`, request.url);
-    newUrl.search = request.nextUrl.search;
-
-    return NextResponse.redirect(newUrl);
+    // Redirect if missing locale
+    const locale = getLocale(request)
+    request.nextUrl.pathname = `/${locale}${pathname}`
+    return NextResponse.redirect(request.nextUrl)
 }
 
 export const config = {
     matcher: [
-        // Skip all internal paths (_next, assets, api)
-        '/((?!_next|favicon.ico|api|.*\\..*).*)',
+        // Skip all internal paths (_next)
+        '/((?!_next|favicon.ico|api).*)',
     ],
-};
+}

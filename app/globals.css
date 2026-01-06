@@ -30,43 +30,25 @@
 }
 
 :root {
-  /* Rich Minimalist Japanese Palette */
-
-  /* Washi White / Paper */
-  --background: #F9F9F8;
-  /* Sumi Charcoal / Ink */
-  --foreground: #2D2D2D;
-
-  /* Card Background (Slightly lighter than bg on light mode, or glass) */
-  --card: #FFFFFF;
-  --card-foreground: #2D2D2D;
-
-  --popover: #FFFFFF;
-  --popover-foreground: #2D2D2D;
-
-  /* Japan Indigo (Kachi-iro) - Bold accent */
-  --primary: #2B4C7E;
-  --primary-foreground: #FFFFFF;
-
-  /* Stone / Pebble (Light Gray for secondary) */
-  --secondary: #E5E5E5;
-  --secondary-foreground: #2D2D2D;
-
-  /* Muted Text / Silver Gray */
-  --muted: #F4F4F5;
-  --muted-foreground: #6B7280;
-
-  /* Subtle Accent (Match Primary or lighter indigo) */
-  --accent: #EBF1F5;
-  --accent-foreground: #2B4C7E;
-
-  --destructive: #B91C1C;
-  /* Traditional Crimson Red could work too but sticking to safe red */
-  --destructive-foreground: #FFFFFF;
-
-  --border: #E4E4E7;
-  --input: #E4E4E7;
-  --ring: #2B4C7E;
+  --background: #fdfcf8;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  --primary: #0ea5e9;
+  --primary-foreground: #ffffff;
+  --secondary: #f472b6;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #84cc16;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0ea5e9;
   --radius: 0.5rem;
 }
 

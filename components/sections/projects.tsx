@@ -8,8 +8,8 @@ import { Github, ExternalLink, ArrowUpRight } from "lucide-react"
 
 const projects = [
     {
-        title: "Tokyo Metro Nav",
-        description: "Real-time navigation app for the Tokyo subway system aimed at tourists.",
+        title: "Metro Nav",
+        description: "Real-time navigation app for the subway system aimed at tourists.",
         tags: ["Next.js", "Leaflet", "OpenData"],
         links: { github: "#", demo: "#" },
     },

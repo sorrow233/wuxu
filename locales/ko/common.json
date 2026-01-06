@@ -1,0 +1,26 @@
+{
+    "hero": {
+        "location": "도쿄, 일본 🇯🇵",
+        "titleStart": "Dev &",
+        "titleEnd": "Lifestyler.",
+        "description": "도쿄 기반 풀스택 개발자.",
+        "ctaProject": "프로젝트 확인"
+    },
+    "projects": {
+        "title": "주요 프로젝트",
+        "description": "제가 만든 것들입니다."
+    },
+    "about": {
+        "title": "소개",
+        "description1": "안녕하세요!",
+        "description2": "도쿄",
+        "description3": "2024년 10월 도착.",
+        "description4": "기술과 미학의 조화.",
+        "techStack": "기술 스택"
+    },
+    "contact": {
+        "title": "함께 만들어요",
+        "description": "언제든 연락주세요.",
+        "cta": "인사하기"
+    }
+}
