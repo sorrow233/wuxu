@@ -1,4 +1,13 @@
 {
+    "common": {
+        "works": "精选作品",
+        "code": "代码",
+        "demo": "演示",
+        "aboutMe": "关于我",
+        "contact": "联系",
+        "yearsExperience": "年经验",
+        "projectsCompleted": "项目完成"
+    },
     "hero": {
         "location": "日本东京 🇯🇵",
         "titleStart": "开发 &",
@@ -8,7 +17,48 @@
     },
     "projects": {
         "title": "精选项目",
-        "description": "我的一些作品。"
+        "description": "我的一些作品。",
+        "list": [
+            {
+                "title": "Metro Nav",
+                "description": "面向游客的地铁实时导航应用。",
+                "tags": [
+                    "Next.js",
+                    "Leaflet",
+                    "OpenData"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Kanji Flashcards",
+                "description": "基于SRS的背词应用，助你掌握JLPT N2/N1。",
+                "tags": [
+                    "React",
+                    "Firebase",
+                    "PWA"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Personal Portfolio",
+                "description": "你现在看到的这个网站。使用现代技术构建。",
+                "tags": [
+                    "Next.js",
+                    "Tailwind",
+                    "Framer Motion"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            }
+        ]
     },
     "about": {
         "title": "关于我",
@@ -16,7 +66,19 @@
         "description2": "东京",
         "description3": "2024年10月抵达。",
         "description4": "追求技术与美学的融合。",
-        "techStack": "技术栈"
+        "techStack": "技术栈",
+        "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Python",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Git",
+            "Docker"
+        ]
     },
     "contact": {
         "title": "联系我",

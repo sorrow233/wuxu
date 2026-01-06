@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Outfit } from "next/font/google"; // Updated fonts
-import "./globals.css";
+import "../globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",

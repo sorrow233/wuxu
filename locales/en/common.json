@@ -1,4 +1,13 @@
 {
+    "common": {
+        "works": "Works",
+        "code": "Code",
+        "demo": "Demo",
+        "aboutMe": "About Me",
+        "contact": "Contact",
+        "yearsExperience": "Years Experience",
+        "projectsCompleted": "Projects Completed"
+    },
     "hero": {
         "location": "Tokyo, Japan 🇯🇵",
         "titleStart": "Dev &",
@@ -8,7 +17,48 @@
     },
     "projects": {
         "title": "Featured Projects",
-        "description": "A selection of things I've built."
+        "description": "A selection of things I've built.",
+        "list": [
+            {
+                "title": "Metro Nav",
+                "description": "Real-time navigation app for the subway system aimed at tourists.",
+                "tags": [
+                    "Next.js",
+                    "Leaflet",
+                    "OpenData"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Kanji Flashcards",
+                "description": "SRS-based flashcard app for mastering JLPT N2/N1 kanji.",
+                "tags": [
+                    "React",
+                    "Firebase",
+                    "PWA"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            },
+            {
+                "title": "Personal Portfolio",
+                "description": "The website you are looking at right now. Built with modern tech.",
+                "tags": [
+                    "Next.js",
+                    "Tailwind",
+                    "Framer Motion"
+                ],
+                "links": {
+                    "github": "#",
+                    "demo": "#"
+                }
+            }
+        ]
     },
     "about": {
         "title": "About Me",
@@ -16,7 +66,19 @@
         "description2": "Tokyo, Japan",
         "description3": "I arrived in October 2024 and I'm currently studying Japanese at Kyoritsu Japanese Language Academy while continuing my journey as a Full-Stack Developer.",
         "description4": "My goal is to blend technical excellence with the aesthetic sensibility I admire in Japanese design. When I'm not coding, I'm exploring the backstreets of Bunkyo-ku or trying to cook with my limited kitchen gear.",
-        "techStack": "Tech Stack"
+        "techStack": "Tech Stack",
+        "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "Python",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Git",
+            "Docker"
+        ]
     },
     "contact": {
         "title": "Let's Create Something Together",
